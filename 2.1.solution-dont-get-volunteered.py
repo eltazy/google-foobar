@@ -49,13 +49,11 @@ def next_possible_cells(target, curr):
             tmp=curr-10
             all.append(tmp)
             if tmp==target: return all
-    # print(curr, ' ------> ', all)
     return all
     
 def solution(src, dest):
     depth = 0
     curr_cases = [src]
-    # print('\ncurr', curr_cases)
     next_cases = []
     cont = True
     while cont:
@@ -68,8 +66,6 @@ def solution(src, dest):
                 next_cases = next_cases
             depth += 1
         curr_cases = next_cases
-        # print('next', next_cases)
-    # print('\n### result: ', depth)
     return depth
     
 # solution(0, 1)
